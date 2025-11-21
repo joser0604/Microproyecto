@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="barco">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0465268601950602 6.0730092908412E-06 -0.0275844171642638"
+        rpy="0 0 0" />
+      <mass
+        value="0.699029134094238" />
+      <inertia
+        ixx="0.00135766620015822"
+        ixy="-9.04635337956479E-07"
+        ixz="-7.8195669095446E-05"
+        iyy="0.00563852322268755"
+        iyz="-9.44149577040228E-08"
+        izz="0.00660233461976726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hyper_teleop/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hyper_teleop/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="turbina_right">
+    <inertial>
+      <origin
+        xyz="0.00224077697103237 -0.000117458034506884 7.88818430297322E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00197471615360154" />
+      <inertia
+        ixx="6.40922670725841E-07"
+        ixy="-1.65333639733798E-08"
+        ixz="3.38656470482504E-14"
+        iyy="3.263756534397E-07"
+        iyz="3.45763311547139E-14"
+        izz="3.25509740067833E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hyper_teleop/meshes/turbina_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.850980392156863 0.0705882352941176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hyper_teleop/meshes/turbina_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="turbinaright"
+    type="continuous">
+    <origin
+      xyz="-0.218663137851867 -0.0377461303729278 -0.0486980072060062"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="turbina_right" />
+    <axis
+      xyz="0.998628987904613 -0.0523463897189544 0" />
+  </joint>
+  <link
+    name="turbina_left">
+    <inertial>
+      <origin
+        xyz="0.00224077703425712 -0.000117455425402188 7.78012529401018E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00197471591110881" />
+      <inertia
+        ixx="6.40922613663655E-07"
+        ixy="-1.65333643668567E-08"
+        ixz="4.17392034657744E-14"
+        iyy="3.26375670073134E-07"
+        iyz="2.98393438078545E-14"
+        izz="3.25509667766148E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hyper_teleop/meshes/turbina_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.850980392156863 0.0705882352941176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hyper_teleop/meshes/turbina_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="turbinaleft"
+    type="continuous">
+    <origin
+      xyz="-0.218630107750605 0.0362088206398113 -0.0493281331186322"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="turbina_left" />
+    <axis
+      xyz="0.998628987904613 -0.0523463897189544 0" />
+  </joint>
+
+
+  <!-- ===================== GAZEBO (GZ) ===================== -->
+   <!-- ===================== GAZEBO (GZ) ===================== -->
+  <gazebo>
+    <!-- DiffDrive moderno -->
+    <plugin filename="libgz-sim-diff-drive-system.so" name="gz::sim::systems::DiffDrive">
+      <!-- Joints que sí existen -->
+      <left_joint>turbinaleft</left_joint>
+      <right_joint>turbinaright</right_joint>
+
+      <wheel_separation>0.21</wheel_separation>
+      <wheel_radius>0.08</wheel_radius>
+
+      <odom_publish_frequency>50</odom_publish_frequency>
+      <topic>/cmd_vel</topic>
+      <odom_topic>/odom</odom_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
+
+      <max_linear_velocity>2.2</max_linear_velocity>
+      <max_angular_velocity>1.5</max_angular_velocity>
+    </plugin>
+    
+        <!-- Mueve directamente el modelo según /cmd_vel -->
+    <plugin filename="libgz-sim-velocity-control-system.so"
+            name="gz::sim::systems::VelocityControl">
+      <topic>/cmd_vel</topic>
+    </plugin>
+
+    <!-- Pose Publisher -->
+    <plugin filename="libgz-sim-pose-publisher-system.so" name="gz::sim::systems::PosePublisher">
+      <publish_link_pose>true</publish_link_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_nested_model_pose>false</publish_nested_model_pose>
+    </plugin>
+
+    <!-- Joint State Publisher -->
+    <plugin filename="libgz-sim-joint-state-publisher-system.so" name="gz::sim::systems::JointStatePublisher">
+      <topic>/joint_states</topic>
+      <joint_name>turbinaleft</joint_name>
+      <joint_name>turbinaright</joint_name>
+    </plugin>
+
+    <!-- Wheel Slip -->
+    <plugin filename="libgz-sim-wheel-slip-system.so" name="gz::sim::systems::WheelSlip">
+      <wheel link_name="turbina_left">
+        <slip_compliance_lateral>0.05</slip_compliance_lateral>
+        <slip_compliance_longitudinal>0.002</slip_compliance_longitudinal>
+      </wheel>
+      <wheel link_name="turbina_right">
+        <slip_compliance_lateral>0.05</slip_compliance_lateral>
+        <slip_compliance_longitudinal>0.002</slip_compliance_longitudinal>
+      </wheel>
+    </plugin>
+  </gazebo>
+
+  <!-- ===== Materiales y fricción ===== -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
+
+  <gazebo reference="turbina_left">
+    <material>Gazebo/Black</material>
+    <mu1>1.2</mu1>
+    <mu2>1.2</mu2>
+  </gazebo>
+
+  <gazebo reference="turbina_right">
+    <material>Gazebo/Black</material>
+    <mu1>1.2</mu1>
+    <mu2>1.2</mu2>
+  </gazebo>
+
+
+</robot>
+

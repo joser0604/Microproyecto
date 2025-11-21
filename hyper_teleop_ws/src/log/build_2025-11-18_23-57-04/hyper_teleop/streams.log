@@ -1,0 +1,59 @@
+[0.684s] Invoking command in '/home/richi/hyper_teleop_ws/src/hyper_teleop': PYTHONPATH=/home/richi/hyper_teleop_ws/src/build/hyper_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hyper_teleop build --build-base /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build install --record /home/richi/hyper_teleop_ws/src/build/hyper_teleop/install.log --single-version-externally-managed install_data
+[0.844s] running egg_info
+[0.844s] creating ../build/hyper_teleop/hyper_teleop.egg-info
+[0.845s] writing ../build/hyper_teleop/hyper_teleop.egg-info/PKG-INFO
+[0.845s] writing dependency_links to ../build/hyper_teleop/hyper_teleop.egg-info/dependency_links.txt
+[0.845s] writing entry points to ../build/hyper_teleop/hyper_teleop.egg-info/entry_points.txt
+[0.845s] writing requirements to ../build/hyper_teleop/hyper_teleop.egg-info/requires.txt
+[0.845s] writing top-level names to ../build/hyper_teleop/hyper_teleop.egg-info/top_level.txt
+[0.845s] writing manifest file '../build/hyper_teleop/hyper_teleop.egg-info/SOURCES.txt'
+[0.853s] reading manifest file '../build/hyper_teleop/hyper_teleop.egg-info/SOURCES.txt'
+[0.854s] writing manifest file '../build/hyper_teleop/hyper_teleop.egg-info/SOURCES.txt'
+[0.854s] running build
+[0.854s] running build_py
+[0.854s] creating /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build
+[0.854s] creating /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib
+[0.854s] creating /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop
+[0.854s] copying hyper_teleop/teleop_chimbo.py -> /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop
+[0.855s] copying hyper_teleop/teleop_node_limited.py -> /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop
+[0.855s] copying hyper_teleop/__init__.py -> /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop
+[0.855s] copying hyper_teleop/bridge_sus.py -> /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop
+[0.855s] running install
+[0.855s] running install_lib
+[0.856s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop
+[0.856s] copying /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop/teleop_chimbo.py -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop
+[0.856s] copying /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop/teleop_node_limited.py -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop
+[0.856s] copying /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop/__init__.py -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop
+[0.856s] copying /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build/lib/hyper_teleop/bridge_sus.py -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop
+[0.856s] byte-compiling /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop/teleop_chimbo.py to teleop_chimbo.cpython-310.pyc
+[0.857s] byte-compiling /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop/teleop_node_limited.py to teleop_node_limited.cpython-310.pyc
+[0.858s] byte-compiling /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop/__init__.py to __init__.cpython-310.pyc
+[0.858s] byte-compiling /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop/bridge_sus.py to bridge_sus.cpython-310.pyc
+[0.859s] running install_data
+[0.859s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/ament_index
+[0.859s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/ament_index/resource_index
+[0.859s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/ament_index/resource_index/packages
+[0.859s] copying resource/hyper_teleop -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/ament_index/resource_index/packages
+[0.859s] copying package.xml -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop
+[0.859s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/launch
+[0.859s] copying launch/hyper.launch.py -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/launch
+[0.859s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/config
+[0.859s] copying config/teleop_params.yaml -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/config
+[0.860s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/urdf
+[0.860s] copying urdf/salvavidas.urdf -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/urdf
+[0.860s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/worlds
+[0.860s] copying worlds/flat_world.sdf -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/worlds
+[0.860s] copying worlds/piscina_world.sdf -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/worlds
+[0.861s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/rviz
+[0.861s] copying rviz/teleop_rviz.rviz -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/rviz
+[0.861s] creating /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/meshes
+[0.861s] copying meshes/turbina_right.STL -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/meshes
+[0.862s] copying meshes/turbina_left.STL -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/meshes
+[0.863s] copying meshes/base_link.STL -> /home/richi/hyper_teleop_ws/src/install/hyper_teleop/share/hyper_teleop/meshes
+[0.864s] running install_egg_info
+[0.866s] Copying ../build/hyper_teleop/hyper_teleop.egg-info to /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages/hyper_teleop-0.0.1-py3.10.egg-info
+[0.866s] running install_scripts
+[0.879s] Installing bridge_sus script to /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/hyper_teleop
+[0.879s] Installing teleop_chimbo script to /home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/hyper_teleop
+[0.879s] writing list of installed files to '/home/richi/hyper_teleop_ws/src/build/hyper_teleop/install.log'
+[0.894s] Invoked command in '/home/richi/hyper_teleop_ws/src/hyper_teleop' returned '0': PYTHONPATH=/home/richi/hyper_teleop_ws/src/build/hyper_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/richi/hyper_teleop_ws/src/install/hyper_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hyper_teleop build --build-base /home/richi/hyper_teleop_ws/src/build/hyper_teleop/build install --record /home/richi/hyper_teleop_ws/src/build/hyper_teleop/install.log --single-version-externally-managed install_data
